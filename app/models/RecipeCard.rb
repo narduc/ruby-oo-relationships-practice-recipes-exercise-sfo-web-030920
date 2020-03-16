@@ -1,27 +1,25 @@
 class RecipeCard
+  attr_reader :date, :rating
+  attr_accessor :user, :recipe
 
-    attr_reader :date, :rating
-    attr_accessor :user, :recipe
+  @@all = []
 
-    @@all = []
-    # arguemtns  recipe, user, date
-    def initialize(recipe_obj, user_obj, date, rating)
-        @recipe = recipe_obj
-        @user = user_obj
-        @date = date
-        @rating = rating
-        @@all << self
-    end
+  def initialize(recipe_obj, user_obj, date, rating)
+    @recipe = recipe_obj
+    @user = user_obj
+    @date = date
+    @rating = rating
+    @@all << self
+  end
 
-    def self.all
-        @@all
-    end
-        # recipe = RecipeCard.new("pie")
+  def self.all
+    @@all
+  end
 end
 
 # ### `RecipeCard`
 # A RecipeCard is the join between a user instance and a recipe instance.  This is a has-many-through relationship.
-# Build the following methods on the RecipeCard class:  
+# Build the following methods on the RecipeCard class:
 
 # - `RecipeCard.all`
 # should return all of the RecipeCard instances
