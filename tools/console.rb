@@ -1,3 +1,20 @@
-require_relative '../config/environment.rb'
-    edd = User.new("edd")
-binding.pry
+require_relative "../config/environment.rb"
+red = User.new("Radniel")
+edd = User.new("Eduardo")
+recipe1 = Recipe.new("Chilakiles")
+recipe2 = Recipe.new("Burguer")
+recipe3 = Recipe.new("Godzilla hotdog")
+pizza = Recipe.new("Pizza")
+ing1 = Ingredient.new("Tomato")
+ing2 = Ingredient.new("Tortilla")
+recipeCard1 = RecipeCard.new(recipe1, red)
+recipeCard2 = RecipeCard.new(recipe2, edd)
+recipeCard3 = RecipeCard.new(pizza, red)
+recipeIngredient = RecipeIngredient.new(recipe1, ing1)
+recipeIngredient1 = RecipeIngredient.new(recipe2, ing2)
+date = "12/12/2020"
+red.add_recipe_card(recipe2, date, 4.0)
+red.add_recipe_card(recipe1, date, 4.6)
+red.add_recipe_card(recipe1, date, 2)
+red.add_recipe_card(recipe3, date, 4.9)
+red.declare_alergy(ing2)
