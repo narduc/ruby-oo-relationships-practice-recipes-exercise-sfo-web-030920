@@ -1,4 +1,5 @@
-require_relative "../config/environment.rb"
+require_relative "../config/environment"
+
 red = User.new("Radniel")
 edd = User.new("Eduardo")
 recipe1 = Recipe.new("Chilakiles")
